@@ -1,7 +1,7 @@
 title: Pushpak
-tagline: 'A text-focused Jekyll theme.'
+tagline: 'Asp.net Developer | Azure Developer | Web Developer | React & Angular | Microsoft Certified'
 description: 'A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.'
-url: 'https://pushpk.github.io/blog'
+url: 'https://pushpk.github.io'
 author: 'Pushpak Panchal'
 avatar: /assets/img/sample/avatar.jpg
 github:
@@ -15,7 +15,7 @@ social:
         - 'https://twitter.com/username'
         - 'https://github.com/pushpk'
 google_site_verification: google_meta_tag_verification
-baseurl: 'https://pushpk.github.io/blog'
+baseurl: '/blog'
 timezone: America/Chicago
 google_analytics:
     id: ""
