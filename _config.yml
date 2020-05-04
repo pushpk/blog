@@ -44,14 +44,14 @@ permalink: '/posts/:title/'
 defaults:
     -
         scope:
-            path: /blog
+            path: /
             type: posts
         values:
             layout: post
             comments: true
             toc: true
             location: Post
-            breadcrumb: [{label: Posts, url: /blog}]
+            breadcrumb: [{label: Posts, url: /}]
     -
         scope:
             path: _drafts
