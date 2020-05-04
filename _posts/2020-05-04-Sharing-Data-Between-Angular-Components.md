@@ -8,7 +8,7 @@ seo:
   date_modified: 2020-03-26 13:12:27 -0500
 ---
 {:refdef: style="text-align: center;"}
-![upload-image](/blog/assets/img/commons/Angular_Components.jpg)
+![upload-image](/assets/img/commons/Angular_Components.jpg)
 {: refdef}
 
 
@@ -100,7 +100,7 @@ Child component html
 This is how app looks after adding some bootstap class and styles, here is [stackbitz link](https://stackblitz.com/edit/angular-communicating-between-components-esu5rm) for reference
 
 {:refdef: style="text-align: center;"}
-![img-1](/blog/assets/img/commons/img-1.jpg)
+![img-1](/assets/img/commons/img-1.jpg)
 {: refdef}
 
 Now in order to pass text-box value to child value label, we need to use @input() decorator like below on line 9 after importing it from angular core library on line 1:
@@ -135,7 +135,7 @@ now we can easily bind that field from parent component where we are using child
 With that we should get result like below:
 
 {:refdef: style="text-align: center;"}
-![img-2](/blog/assets/img/commons/img-2.gif)
+![img-2](/assets/img/commons/img-2.gif)
 {: refdef}
 
 Thank you!
