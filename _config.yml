@@ -15,7 +15,7 @@ social:
         - 'https://twitter.com/username'
         - 'https://github.com/pushpk'
 google_site_verification: google_meta_tag_verification
-baseurl: '/'
+baseurl: '/blog'
 timezone: America/Chicago
 google_analytics:
     id: ""
@@ -44,14 +44,14 @@ permalink: '/posts/:title/'
 defaults:
     -
         scope:
-            path: /
+            path: /blog
             type: posts
         values:
             layout: post
             comments: true
             toc: true
             location: Post
-            breadcrumb: [{label: Posts, url: /}]
+            breadcrumb: [{label: Posts, url: /blog}]
     -
         scope:
             path: _drafts
