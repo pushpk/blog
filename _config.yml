@@ -1,0 +1,135 @@
+title: Pushpak
+tagline: 'A text-focused Jekyll theme.'
+description: 'A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.'
+url: 'https://pushpk.github.io/blog'
+author: 'Pushpak Panchal'
+avatar: /assets/img/sample/avatar.jpg
+github:
+    username: pushpk
+twitter:
+    username: pushpak_net
+social:
+    name: 'Pushpak Panchal'
+    email: me@pushpk.com
+    links:
+        - 'https://twitter.com/username'
+        - 'https://github.com/pushpk'
+google_site_verification: google_meta_tag_verification
+baseurl: 'https://pushpk.github.io/blog'
+timezone: America/Chicago
+google_analytics:
+    id: ""
+    pv: false
+    proxy_baseurl: ""
+    proxy_url: ""
+disqus:
+    comments: false
+    shortname: ""
+theme_mode: dual
+toc: true
+paginate: 10
+markdown: kramdown
+highlighter: rouge
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        css_class: highlight
+        span:
+            line_numbers: false
+        block:
+            line_numbers: true
+            start_line: 1
+permalink: '/posts/:title/'
+defaults:
+    -
+        scope:
+            path: /
+            type: posts
+        values:
+            layout: post
+            comments: true
+            toc: true
+            location: Post
+            breadcrumb: [{label: Posts, url: /}]
+    -
+        scope:
+            path: _drafts
+        values:
+            comments: false
+    -
+        scope:
+            path: tags
+        values:
+            tab_active: Tags
+            location: Tag
+            breadcrumb: [{label: Home, url: /}, {label: Tags, url: /tabs/tags/}]
+    -
+        scope:
+            path: categories
+        values:
+            tab_active: Categories
+            location: Category
+            breadcrumb: [{label: Home, url: /}, {label: Categories, url: /tabs/categories/}]
+    -
+        scope:
+            path: tabs
+        values:
+            layout: page
+            dynamic_title: true
+            breadcrumb: [{label: Home, url: /}]
+    -
+        scope:
+            path: assets/data
+        values:
+            layout: compress
+sass:
+    sass_dir: /assets/css
+    style: compressed
+compress_html:
+    clippings: all
+    comments:
+        - '<!-- '
+        - ' -->'
+    endings:
+        - html
+        - head
+        - body
+        - dt
+        - dd
+        - rt
+        - rp
+        - optgroup
+        - option
+        - colgroup
+        - caption
+        - thead
+        - tbody
+        - tfoot
+        - tr
+        - td
+        - th
+    profile: false
+    blanklines: false
+    ignore:
+        envs: []
+exclude:
+    - vendor
+    - Gemfile.lock
+    - Gemfile
+    - tools
+    - docs
+sitemap_exclude:
+    fuzzy:
+        - /assets/
+    accurate:
+        - /norobots/
+        - /tabs/
+        - /categories/
+        - /tags/
+        - /posts/
+        - 404.html
+        - feed.xml
+        - sitemap.xml
+        - robots.txt
+        - redirects.json
