@@ -10,25 +10,134 @@ layout: compress
 <!DOCTYPE html>
 
 {% capture prefer_mode %}
-  {% if site.theme_mode != "dual" %}
-    mode="{{ site.theme_mode }}"
-  {% endif %}
+{% if site.theme_mode != "dual" %}
+mode="{{ site.theme_mode }}"
+{% endif %}
 {% endcapture %}
 
-<html lang="en" {{ prefer_mode }} >
+<html lang="en" {{ prefer_mode }}>
 
-  {% include head.html %}
+{% include head.html %}
+<script>
+  window.onload = function () {
+    if (localStorage.getItem('showpost')) {
+      loadBlogORWecomePage('blog');
+    }
+    else {
+      loadBlogORWecomePage('welcome');
+    }
 
-  <body data-spy="scroll" data-target="#toc">
+  };
+  function loadBlogORWecomePage(item) {
+
+    var welcome = document.getElementById('welcome');
+    var main = document.getElementById('main');
+    if (item == 'blog') {
+      welcome.style.display = 'none';
+      main.style.display = 'initial';
+      localStorage.setItem('showpost', 'showpost');
+    }
+    else {
+      welcome.style.display = 'initial';
+      main.style.display = 'none';
+      localStorage.clear();
+    }
+  }
+
+
+</script>
+
+<body data-spy="scroll" data-target="#toc">
+
+  <div id="welcome">
+    <div class="panel-main">
+      <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+          <a onclick="loadBlogORWecomePage('welcom');" title="link to home of Pushpak Panchal">
+            <img src="{{ avatar_url }}" alt="My Profile Photo"
+              style="border-radius: 100%; border: 3px solid; width: 200px;">
+            <h1 class="panel-cover__title panel-title">Pushpak Panchal</h1>
+          </a>
+          <hr class="panel-cover__divider">
+          <p class="panel-cover__description">Plain Page for Pushpak to take notes as he learns and list Side Projects
+          </p>
+          <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+          <div class="navigation-wrapper">
+
+            <nav class="cover-navigation">
+              <ul class="navigation">
+                <li class="navigation__item">
+                  <a title="link to Pushpak Panchal blog" class="big-button" id="blog-btn"
+                    onclick="loadBlogORWecomePage('blog');"><i class="icon icon-pencil"></i> Blog</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="cover-navigation navigation--social">
+              <ul class="navigation">
+
+                <li class="navigation__item">
+                  <a href="https://github.com/{{ site.github.username }}" target="_blank">
+                    <i class="fab fa-github-alt"></i>
+                  </a>
+                  <span class="label">GitHub</span>
+                  </a>
+                </li>
+
+                <li class="navigation__item">
+                  <a href="https://www.linkedin.com/in/r-i-c-h" title="r-i-c-h on LinkedIn" target="_blank">
+                    <i class="icon icon-social-linkedin"></i>
+                    <span class="label">LinkedIn</span>
+                  </a>
+                </li>
+
+                <li class="navigation__item">
+                  <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <span class="label">Twitter</span>
+                  </a>
+                </li>
+
+                <li class="navigation__item">
+                  <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <span class="label">Email</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="cover-navigation">
+              <ul class="navigation">
+                <li class="navigation__item">
+                  <a href="/projects/" title="link to some projects by Rich Werden" class="big-button"
+                    id="project-btn"><i class="icon icon-wrench"></i> Projects</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="panel-cover--overlay"></div>
+    </div>
+  </div>
+
+  <div style="display: none;" id="main">
     <div id="sidebar" class="d-flex flex-column">
       {% include sidebar.html %}
     </div>
     <div id="main-wrapper">
+
+
+
       {% include topbar.html %}
       <div id="main">
 
         {% capture _content %}
-          {{ content }}
+        {{ content }}
         {% endcapture %}
 
         {% include fixlinenos.html %}
@@ -46,11 +155,11 @@ layout: compress
     </a>
 
     {% if jekyll.environment == 'production' %}
-      {% include google-analytics.html %}
+    {% include google-analytics.html %}
     {% endif %}
 
     {% include search-loader.html %}
-
-  </body>
+  </div>
+</body>
 
 </html>

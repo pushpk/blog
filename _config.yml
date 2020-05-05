@@ -8,6 +8,8 @@ github:
     username: pushpk
 twitter:
     username: pushpak_net
+linkedin:
+    username: pushpk
 social:
     name: 'Pushpak Panchal'
     email: me@pushpk.com
@@ -15,7 +17,7 @@ social:
         - 'https://twitter.com/username'
         - 'https://github.com/pushpk'
 google_site_verification: google_meta_tag_verification
-baseurl: '/'
+baseurl: /blog
 timezone: America/Chicago
 google_analytics:
     id: ""
@@ -44,14 +46,23 @@ permalink: '/posts/:title/'
 defaults:
     -
         scope:
-            path: "/"
+            path: /
+        values:
+            layout: welcome
+            comments: false
+            toc: true
+            location: welcome
+            breadcrumb: [{label: welcome, url: /}]
+    -
+        scope:
+            path: /posts
             type: posts
         values:
             layout: post
             comments: true
             toc: true
             location: Post
-            breadcrumb: [{label: Posts, url: /}]
+            breadcrumb: [{label: Posts, url: /posts}]
     -
         scope:
             path: _drafts
