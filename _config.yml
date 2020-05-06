@@ -17,7 +17,7 @@ social:
         - 'https://twitter.com/username'
         - 'https://github.com/pushpk'
 google_site_verification: google_meta_tag_verification
-baseurl: /blog
+baseurl: /
 timezone: America/Chicago
 google_analytics:
     id: ""
