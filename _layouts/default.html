@@ -20,7 +20,8 @@ mode="{{ site.theme_mode }}"
 {% include head.html %}
 <script>
   window.onload = function () {
-    if (localStorage.getItem('showpost')) {
+    console.log(event.target);
+    if (sessionStorage.getItem('show') === 'blog') {
       loadBlogORWecomePage('blog');
     }
     else {
@@ -29,18 +30,18 @@ mode="{{ site.theme_mode }}"
 
   };
   function loadBlogORWecomePage(item) {
-
+    
     var welcome = document.getElementById('welcome');
     var main = document.getElementById('main');
-    if (item == 'blog') {
+    if (item == 'blog' || item == 'project') {
       welcome.style.display = 'none';
       main.style.display = 'initial';
-      localStorage.setItem('showpost', 'showpost');
+      sessionStorage.setItem('show', 'blog');
     }
     else {
       welcome.style.display = 'initial';
       main.style.display = 'none';
-      localStorage.clear();
+      sessionStorage.setItem('show', 'welcome');
     }
   }
 
@@ -49,13 +50,13 @@ mode="{{ site.theme_mode }}"
 
 <body data-spy="scroll" data-target="#toc">
 
-  <div id="welcome">
+  <div id="welcome" style="display: none;">
     <div class="panel-main">
       <div class="panel-main__inner panel-inverted">
         <div class="panel-main__content">
-          <a onclick="loadBlogORWecomePage('welcom');" title="link to home of Pushpak Panchal">
+          <a  title="link to home of Pushpak Panchal" href="javascript:void(0)">
             <img src="{{ avatar_url }}" alt="My Profile Photo"
-              style="border-radius: 100%; border: 3px solid; width: 200px;">
+              style="border-radius: 100%; border: 3px solid; width: 250px;">
             <h1 class="panel-cover__title panel-title">Pushpak Panchal</h1>
           </a>
           <hr class="panel-cover__divider">
@@ -67,9 +68,11 @@ mode="{{ site.theme_mode }}"
 
             <nav class="cover-navigation">
               <ul class="navigation">
+                
                 <li class="navigation__item">
+
                   <a title="link to Pushpak Panchal blog" class="big-button" id="blog-btn"
-                    onclick="loadBlogORWecomePage('blog');"><i class="icon icon-pencil"></i> Blog</a>
+                    onclick="loadBlogORWecomePage('blog');"><i class="fas fa-pencil-alt"></i> Blog</a>
                 </li>
               </ul>
             </nav>
@@ -78,24 +81,28 @@ mode="{{ site.theme_mode }}"
               <ul class="navigation">
 
                 <li class="navigation__item">
-                  <a href="https://github.com/{{ site.github.username }}" target="_blank">
-                    <i class="fab fa-github-alt"></i>
-                  </a>
+                  <a href="https://www.github.com/{{ site.github.username }}" title="Pushpak on GitHub" target="_blank">
+                  <i class="fab fa-github"></i>
+                 
                   <span class="label">GitHub</span>
                   </a>
-                </li>
+                 
+                  </li>
+
+               
 
                 <li class="navigation__item">
-                  <a href="https://www.linkedin.com/in/r-i-c-h" title="r-i-c-h on LinkedIn" target="_blank">
-                    <i class="icon icon-social-linkedin"></i>
+                  <a href="https://www.linkedin.com/in/{{ site.linkedin.username }}" title="Pushpak on LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
                     <span class="label">LinkedIn</span>
                   </a>
+                 
                 </li>
 
                 <li class="navigation__item">
-                  <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
+                  <a href="https://twitter.com/{{ site.twitter.username }}" title="Pushpak on Twitter" target="_blank">
                     <i class="fab fa-twitter"></i>
-                  </a>
+                  
                   <span class="label">Twitter</span>
                   </a>
                 </li>
@@ -103,9 +110,9 @@ mode="{{ site.theme_mode }}"
                 <li class="navigation__item">
                   <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))">
                     <i class="fas fa-envelope"></i>
-                  </a>
+                  
                   <span class="label">Email</span>
-                  </a>
+                </a>
                 </li>
               </ul>
             </nav>
@@ -113,8 +120,8 @@ mode="{{ site.theme_mode }}"
             <nav class="cover-navigation">
               <ul class="navigation">
                 <li class="navigation__item">
-                  <a href="/projects/" title="link to some projects by Rich Werden" class="big-button"
-                    id="project-btn"><i class="icon icon-wrench"></i> Projects</a>
+                  <a href="/blog/tabs/projects/" onclick="loadBlogORWecomePage('project');" title="link to some projects by Pushpak Panchal" class="big-button"
+                    id="project-btn"><i class="fas fa-wrench"></i> Projects</a>
                 </li>
               </ul>
             </nav>
@@ -125,7 +132,7 @@ mode="{{ site.theme_mode }}"
     </div>
   </div>
 
-  <div style="display: none;" id="main">
+  <div  id="main">
     <div id="sidebar" class="d-flex flex-column">
       {% include sidebar.html %}
     </div>

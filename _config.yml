@@ -3,11 +3,11 @@ tagline: 'Asp.net Developer | Azure Developer | Web Developer | React & Angular 
 description: 'A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.'
 url: 'https://pushpk.github.io'
 author: 'Pushpak Panchal'
-avatar: /assets/img/sample/avatar.jpg
+avatar: /assets/img/sample/avatar.jpeg
 github:
     username: pushpk
 twitter:
-    username: pushpak_net
+    username: pushpk_net
 linkedin:
     username: pushpk
 social:
@@ -17,7 +17,7 @@ social:
         - 'https://twitter.com/username'
         - 'https://github.com/pushpk'
 google_site_verification: google_meta_tag_verification
-baseurl: /blog
+baseurl: /
 timezone: America/Chicago
 google_analytics:
     id: ""
