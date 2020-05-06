@@ -744,3 +744,15 @@ hr {
 
 }
 
+@media all and (max-width: 576px) {
+    .navigation-wrapper {
+        display: block;
+    }
+    .navigation__item {
+        flex:  0;
+    }
+
+
+}
+
+
