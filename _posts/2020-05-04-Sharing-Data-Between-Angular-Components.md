@@ -5,7 +5,7 @@ categories: [Blogging, Tutorial]
 tags: [Angular, Web Development]
 toc: false
 seo:
-  date_modified: 2020-03-26 13:12:27 -0500
+  date_modified: 2020-05-04 13:12:27 -0500
 ---
 {:refdef: style="text-align: center;"}
 ![upload-image](/assets/img/commons/Angular_Components.jpg)

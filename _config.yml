@@ -20,13 +20,13 @@ google_site_verification: google_meta_tag_verification
 baseurl: /
 timezone: America/Chicago
 google_analytics:
-    id: ""
+    id: 
     pv: false
     proxy_baseurl: ""
     proxy_url: ""
 disqus:
-    comments: false
-    shortname: ""
+    comments: true
+    shortname: "pushpk-com"
 theme_mode: dual
 toc: true
 paginate: 10
