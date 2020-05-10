@@ -74,6 +74,14 @@ defaults:
             location: Category
             breadcrumb: [{label: Home, url: /}, {label: Categories, url: /tabs/categories/}]
     -
+         
+        scope:
+            path: projects
+        values:
+            tab_active: Projects
+            location: Projects
+            breadcrumb: [{label: Home, url: /}, {label: Categories, url: /tabs/projects/}]
+    -
         scope:
             path: tabs
         values:
