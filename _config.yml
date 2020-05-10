@@ -53,7 +53,7 @@ defaults:
             comments: true
             toc: true
             location: Post
-            breadcrumb: [{label: Posts, url: /posts}]
+            breadcrumb: [{label: Posts, url: /}]
     -
         scope:
             path: _drafts
