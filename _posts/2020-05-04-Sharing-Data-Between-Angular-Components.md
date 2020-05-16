@@ -12,7 +12,7 @@ seo:
 {: refdef}
 
 
-As Angular Project Grows and you start to divide your code into multiple components, there will be need to pass data around between components,   
+As Angular Project Grows and you start to divide your code into multiple components, there will be need to pass data around between components, <br>  
 
 Now these components could be related or not, and where I say related, I specifically mean, Parent-child or Child-Parent Relationship,
 For related components first, following are different ways data can be passed   
