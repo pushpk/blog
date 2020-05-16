@@ -20,7 +20,7 @@ mode="{{ site.theme_mode }}"
 {% include head.html %}
 <script>
   window.onload = function () {
-    console.log(event.target);
+    
     if (sessionStorage.getItem('show') === 'blog') {
       loadBlogORWecomePage('blog');
     }
