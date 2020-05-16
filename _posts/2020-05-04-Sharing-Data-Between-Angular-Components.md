@@ -13,7 +13,7 @@ seo:
 
 
 As Angular Project Grows and you start to divide your code into multiple components, there will be need to pass data around between components, <br> 
-
+<br> 
 
 
 
@@ -39,7 +39,7 @@ This is Part 1 of 2-part series:
 
 
 
-#### __@Input: sharing data from parent to child__
+### @Input: sharing data from parent to child
 
 This is most common way to pass data from Parent to Child, on child component we need to decorate  field with @input decorator to let component know that value for this field will be coming from Parent Component,
 
@@ -149,7 +149,7 @@ With that we should get result like below:
 ![img-2](/assets/img/commons/img-2.gif)
 {: refdef}
 
-#### **@Output & EventEmitter: sharing data from child to parent**
+### @Output & EventEmitter: sharing data from child to parent
 
 @output does opposite of @input, on parent @output is decorator on parent component property, basically its object of  EventEmitter
 
@@ -225,7 +225,7 @@ With all that here is how it looks like in action:
 {: refdef}   
 
 
-### **@ViewChild: sharing data from child to parent**
+### @ViewChild: sharing data from child to parent
 
 Using instance of the child component into the parent as a @ViewChild is the another technique used by the parent to access the property and method of the child component
 

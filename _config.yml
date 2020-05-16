@@ -38,6 +38,7 @@ kramdown:
     syntax_highlighter: rouge
     syntax_highlighter_opts:
         css_class: highlight
+        # default_lang: console
         span:
             line_numbers: false
         block:
