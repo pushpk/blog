@@ -12,7 +12,8 @@ seo:
 {: refdef}
 
 
-As Angular Project Grows and you start to divide your code into multiple components, there will be need to pass data around between components,
+As Angular Project Grows and you start to divide your code into multiple components, there will be need to pass data around between components,   
+
 Now these components could be related or not, and where I say related, I specifically mean, Parent-child or Child-Parent Relationship,
 For related components first, following are different ways data can be passed   
 
@@ -29,12 +30,12 @@ And for non-related components we can use services to share data.
 This is Part 1 of 2-part series:       
 
 
-***[Part 1: Sharing Data from Parent to Child Component and Child to Parent](http://github.com)***   
+**[Part 1: Sharing Data from Parent to Child Component and Child to Parent](http://github.com)**    
 [Part 2: Sharing Data between non-parent-child(siblings) related components](http://github.com)    
 
 
 
-#### **@Input: sharing data from parent to child**
+#### __@Input: sharing data from parent to child__
 
 This is most common way to pass data from Parent to Child, on child component we need to decorate  field with @input decorator to let component know that value for this field will be coming from Parent Component,
 
