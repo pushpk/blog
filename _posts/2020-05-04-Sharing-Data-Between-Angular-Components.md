@@ -243,7 +243,7 @@ Bring in ChildComponent Import like below:
 
 with all this changes, it will work same way as it was before,
 
-Click here to Go on Part 2
+**[Click here](http://pushpk.com/posts/Sharing-Data-Between-Angular-Components-2/)** to Go on Part 2
 
 Thank you!
 
