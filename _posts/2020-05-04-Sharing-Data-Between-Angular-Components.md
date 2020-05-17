@@ -241,7 +241,9 @@ Bring in ChildComponent Import like below:
        <span>Message  From Child : {{this.child.childMessage}} </span>
 ```
 
-with all this changes, it will work same way as it was before:
+with all this changes, it will work same way as it was before,
+
+Click here to Go on Part 2
 
 Thank you!
 
