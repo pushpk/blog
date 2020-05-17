@@ -28,8 +28,8 @@ And for non-related components we can use services to share data.    <br><br>
 This is Part 1 of 2-part series:        <br>
 
 
-**[Part 1: Sharing Data from Parent to Child Component and Child to Parent] (http://github.com)**    
-[Part 2: Sharing Data between non-parent-child(siblings) related components] (http://github.com)    
+**[Part 1: Sharing Data from Parent to Child Component and Child to Parent](http://pushpk.com/posts/Sharing-Data-Between-Angular-Components/)**    
+[Part 2: Sharing Data between non-parent-child(siblings) related components](http://pushpk.com/posts/Sharing-Data-Between-Angular-Components-2/)    
 
 
 ### **@Input: sharing data from parent to child**

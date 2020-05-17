@@ -16,8 +16,8 @@ Welcome to Part-2 of Sharing Data between components in Angular <br>
 This is Part 2 of 2-part series:        <br>
 
 
-[Part 1: Sharing Data from Parent to Child Component and Child to Parent] (http://pushpk.com/posts/Sharing-Data-Between-Angular-Components/)
-**[Part 2: Sharing Data between non-parent-child(siblings) related components] (http://pushpk.com/posts/Sharing-Data-Between-Angular-Components-2/)**    
+[Part 1: Sharing Data from Parent to Child Component and Child to Parent](http://pushpk.com/posts/Sharing-Data-Between-Angular-Components/)
+**[Part 2: Sharing Data between non-parent-child(siblings) related components](http://pushpk.com/posts/Sharing-Data-Between-Angular-Components-2/)**    
 
 
 In Previous Post, We have seen how can we can use @Input, @Output and @Viewchild to share data between Parent-Child Components, In this post, we will talk about how we can share data between components those are not related. <br><br>
