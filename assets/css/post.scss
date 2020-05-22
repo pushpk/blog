@@ -139,7 +139,9 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
-
+ h3,h4,h5{
+   font-weight: bold;
+ }
 
 /*--- Related Posts ---*/
 

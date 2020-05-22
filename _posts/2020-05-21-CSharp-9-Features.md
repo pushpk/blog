@@ -5,21 +5,23 @@ categories: [Csharp, Aspnetcore]
 tags: [Csharp, Backend, aspnetcore]
 toc: false
 seo:
-date_modified: 2020-05-21 14:30:11 -0500
+  date_modified: 2020-05-21 14:30:11 -0500
 ---
 {:refdef: style="text-align: center;"}
-![upload-image](/assets/img/commons/csharp-9-features.jpg)
+![csharp-9-features](/assets/img/commons/csharp-9-features.jpg)
 {: refdef}
 
 
 
-Microsoft build 2020, Mads Torgersen, Program Manager for the C# Language and Dustin Campbel, a principal software engineer on the .NET Developer Experience team showed C# 9.0 features that will be shipped with .NET 5 in upcoming November 2020,
+Microsoft build 2020, Mads Torgersen, Program Manager for the C# Language and Dustin Campbel, a principal software engineer on the .NET Developer Experience team showed C# 9.0 features that will be shipped with .NET 5 in upcoming November 2020, <br><br>  
+
 
 Let's go over in brief to see all features that were introduced in session
 
 ### **Improved Pattern Matching**
 
-There are several new patterns been added to C# 9.0, Pattern Matching was added in C#7, [here](https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching) is a tutorial on pattern matching
+There are several new patterns been added to C# 9.0, Pattern Matching was added in C#7, [here](https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching) is a tutorial on pattern matching  <br><br> 
+
 
 ##### **No need to declare default identifier in switch**
 
@@ -43,9 +45,11 @@ _ => throw new ArgumentException("Not a known Product type", nameof(product))
 LaptopProduct => 500
 ```
 
-Note that on with C# 9.0 we can specify Type without '_'
+Note that on with C# 9.0 we can specify Type without '_'  <br><br> 
 
-##### **Relational Patterns**
+
+##### **Relational Patterns**   <br><br>
+
 
 With C# 9.0, relational operators (<, >, etc) can be used as patterns indicators like below
 
@@ -58,7 +62,8 @@ LaptopProduct t when t.ScreenSize switch
 _ => 500,
 },
 ```
-##### **Logical Patterns**
+##### **Logical Patterns**   
+
 
 You can combine relational operators with Logical Operators and, or and not(word) like blow:
 
@@ -191,7 +196,8 @@ With 'init' it will give error if we will try to set property value anywhere els
 
 #### **Records**
 
-Records are a new, simplified declaration form for C# class and struct types that combine the benefits of a number of simpler features. It can represent data as a Database record or some model entity:
+Records are a new, simplified declaration form for C# class and struct types that combine the benefits of a number of simpler features. It can represent data as a Database record or some model entity:   
+
 
 Read-only properties => Immutable Type
 Equality implementations => Structural equality
@@ -205,25 +211,32 @@ public string LastName { get; init; }
 }
 
 ```
-The Data keyword marks class as a record. Let's go over few value-like features it will have by making it a Record class
+The Data keyword marks class as a record. Let's go over few value-like features it will have by making it a Record class   
+
 
 ##### **With-expressions : Non-distructive mutation**
 
-Working with immutable data, common pattern is to create new values from existing value that represent a new state, For Example in Person object, if we want object with different last name, we would have new person object with copying properties from existing person object with only different last name
+Working with immutable data, common pattern is to create new values from existing value that represent a new state, For Example in Person object, if we want object with different last name, we would have new person object with copying properties from existing person object with only different last name   
 
-C# 9.0 allows this using "with-" expression
+
+C# 9.0 allows this using "with-" expression   
+
 
 ```csharp
 var differentPerson = person with {LastName = "Jenny"}
 ```
 
-It uses object initializer syntax to state what's different in the new object form old object. Behind the scene record class implicitly defines a <kbd>protected</kbd> copy constructor which takes original object to copy values:
+It uses object initializer syntax to state what's different in the new object form old object. Behind the scene record class implicitly defines a <kbd>protected</kbd> copy constructor which takes original object to copy values:   
 
-##### **Value-based equality**
 
-Object.Equals method will behave same for record class as Structs, comparing each field by calling Equals on them recursively.
+##### **Value-based equality**   
+ 
 
-Which means Two object instances from Record Class can be same without being same object. For Example: if we put original last name back and create new object like below, Equals method for (person, originalPerson) will be true, ReferenceEquals(person, originalPerson) will be false.
+Object.Equals method will behave same for record class as Structs, comparing each field by calling Equals on them recursively.   
+
+
+Which means Two object instances from Record Class can be same without being same object. For Example: if we put original last name back and create new object like below, Equals method for (person, originalPerson) will be true, ReferenceEquals(person, originalPerson) will be false.   
+<br><br>
 
 ```csharp
 var originalPerson = differentPerson with {LastName = "Taylor"}
