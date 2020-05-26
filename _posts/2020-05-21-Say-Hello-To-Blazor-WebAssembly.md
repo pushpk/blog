@@ -74,14 +74,14 @@ There are few things we need to get started on Blazor Web Assembly Project
 
 * After installing above tools, To Create Blazor WebAssembly, Open command/terminal to run following command:
 
- ```dotnetcli
+ ```console
     dotnet new blazorwasm -o Hello-Blazor-WebAssembly
  ```
 * Open the *Hello-Blazor-WebAssembly* folder in Visual Studio Code.
 * The IDE requests that you add assets to build and debug the project. Select Yes.
 * Run following command from VS Code terminal()
   
-   ```dotnetcli
+   ```console
     dotnet run
    ```
 * Open the browser and navigate to http://localhost:5000 or https://localhost:5001. You should be able to see the application something like the following :
