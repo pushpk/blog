@@ -33,9 +33,9 @@ It takes Code Written in any language and compile into what it called WebAssembl
 WebAssembly Browser Support:
 
 
-({:refdef: style="text-align: center;"}
+
 ![Blazor-Browser-Support](/assets/img/commons/blazor-1/WebAssembly _Support.jpg)
-{: refdef})
+
 
 ### *Blazor: Browser-based Razor Pages*
 
@@ -48,9 +48,7 @@ Blazor is designed to run client-side in the browser on a WebAssembly-based .NET
 During the 2019 edition of .NET Conf, Microsoft demonstrated two different Blazor editions (Or two different ways of hosting Blazor App): Blazor Server and Blazor WebAssembly. Blazor Server, shipped together with .NET Core 3.0, allows web applications using Razor components to be hosted in ASP.NET Core servers. Users accessing the application act as thin clients, and the UI in the browser is updated through the use of asynchronous notifications (using the SignalR library). 
 
 
-({:refdef: style="text-align: center;"}
 ![Blazor-Hosting-Models](/assets/img/commons/blazor-1/blazor+models.png)
-{: refdef})
 
 And last week, during #MSBuild 2020, Microsoft announced Blazor WebAssembly. Blazor WebAssembly is now the second supported way to host your Blazor components: client-side in the browser using a WebAssembly-based .NET runtime.
 
