@@ -52,7 +52,7 @@ mode="{{ site.theme_mode }}"
 <script>
   window.onload = function () {
     
-    if (sessionStorage.getItem('show') === 'blog') {
+    if (sessionStorage.getItem('show') === 'blog' || window.location.href != "http://pushpk.com/") {
       loadBlogORWecomePage('blog');
     }
     else {
